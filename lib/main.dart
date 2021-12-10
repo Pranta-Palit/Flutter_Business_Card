@@ -15,7 +15,26 @@ class BusinessCard extends StatelessWidget {
 
       home: Scaffold(
         backgroundColor: Colors.blue,
-        body: Container(),
+        appBar: AppBar(
+          title: Center(
+            child: Text("Business Card"),
+          ),
+        ),
+        body: SafeArea(
+          child: Container(
+            color: Colors.white,
+            height: 100.00,
+            width: 100.00,
+            // margin helps to manage spacess outside container
+            margin: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0),
+            // padding helps to manage spaces inside container
+            // the text is already centered, but for padding its not showing in center
+            padding: EdgeInsets.only(top: 50.0),
+            child: Center(
+              child: Text("Pranta"),
+            ),
+          ),
+        ),
       ),
     );
   }
