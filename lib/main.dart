@@ -24,6 +24,7 @@ class BusinessCard extends StatelessWidget {
         ),
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               // profile picture CircleAvatar
               CircleAvatar(
@@ -52,56 +53,51 @@ class BusinessCard extends StatelessWidget {
                   letterSpacing: 0.8,
                 ),
               ),
-              // container for phone number textbox
-              Container(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                padding: EdgeInsets.all(8.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      "+880 13 1271 9768",
-                      style: TextStyle(
-                        fontFamily: "Source Sans Pro",
-                        fontSize: 16.0,
-                        color: Colors.teal[900],
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.teal[100],
                 ),
               ),
-              // container for email textbox
-              Container(
-                color: Colors.white,
+              // card for phone number textbox
+              Card(
+                // card by default has white color, padding not available
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                padding: EdgeInsets.all(8.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.email,
-                      color: Colors.teal,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    "+880 13 1271 9768",
+                    style: TextStyle(
+                      fontFamily: "Source Sans Pro",
+                      fontSize: 16.0,
+                      color: Colors.teal[900],
+                      fontWeight: FontWeight.bold,
                     ),
-                    SizedBox(
-                      width: 10.0,
+                  ),
+                ),
+              ),
+              // card for email textbox
+              Card(
+                // card by default has white color, padding not available
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    "ppalit.cghs@gmail.com",
+                    style: TextStyle(
+                      fontFamily: "Source Sans Pro",
+                      fontSize: 16.0,
+                      color: Colors.teal[900],
+                      fontWeight: FontWeight.bold,
                     ),
-                    Text(
-                      "ppalit.cghs@gmail.com",
-                      style: TextStyle(
-                        fontFamily: "Source Sans Pro",
-                        fontSize: 16.0,
-                        color: Colors.teal[900],
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ],
