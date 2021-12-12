@@ -25,17 +25,31 @@ class BusinessCard extends StatelessWidget {
         body: SafeArea(
           child: Column(
             children: <Widget>[
+              // profile picture CircleAvatar
               CircleAvatar(
                 backgroundColor: Colors.grey[400],
                 radius: 50.0,
                 backgroundImage: AssetImage("images/pranta.png"),
               ),
+              // Text: Full Name
               Text(
                 "Pranta Palit",
                 style: TextStyle(
-                  fontSize: 20.0,
+                  fontFamily: "Pacifico",
+                  fontSize: 25.0,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
+                ),
+              ),
+              // Text: Job Position
+              Text(
+                "PROGRAMMING INSTRUCTOR",
+                style: TextStyle(
+                  fontFamily: "Source Sans Pro",
+                  fontSize: 16.0,
+                  color: Colors.teal[100],
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 0.8,
                 ),
               ),
             ],
